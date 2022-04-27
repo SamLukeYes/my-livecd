@@ -43,12 +43,16 @@ in
       };
     };
     systemPackages = with pkgs;
-      [gnupg local.pacman];
+      [
+        gnupg
+        # local.gnupg
+        local.pacman
+      ];
   };
 
   systemd.services.pacman-init = {
       wantedBy = [ "multi-user.target" ];
-      description = "Initializes Pacman";
+      description = "Initializing Pacman";
       serviceConfig = {
         Type = "oneshot";
         RemainAfterExit = true;
