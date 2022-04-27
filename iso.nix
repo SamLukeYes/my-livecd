@@ -78,9 +78,11 @@ in
     systemPackages = with pkgs; [
 
       arch-install-scripts
+      gnome.file-roller
+      gnome.gnome-system-monitor
       gnome.gnome-terminal
+      gnome.nautilus
       gnupg
-      htop
       inxi
       pacman
       timeshift
