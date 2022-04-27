@@ -24,7 +24,7 @@ stdenv.mkDerivation rec {
   version = "6.0.1";
 
   src = fetchurl {
-    url = "https://sources.archlinux.org/other/${pname}/${pname}-${version}.tar.xz";
+    url = "${import ../reverse-proxy.nix}https://sources.archlinux.org/other/${pname}/${pname}-${version}.tar.xz";
     hash = "sha256-DbYUVuVqpJ4mDokcCwJb4hAxnmKxVSHynT6TsA079zE=";
   };
 

@@ -27,7 +27,7 @@ sed -i 's|sha256-fdCcajRKAaLGGKAhCvxsdfjtogXjJp2u0PV2P3R6yao=|sha256-x7KbKA7/Zza
 
 # https://github.com/NixOS/nixpkgs/pull/161115
 # patch --directory="$NIXPKGS" -p1 < patches/pacman.patch
-cp pacman/default.nix $NIXPKGS/pkgs/tools/package-management/pacman/default.nix
+# cp pacman/default.nix $NIXPKGS/pkgs/tools/package-management/pacman/default.nix
 
 nix-build $NIXPKGS/nixos -A config.system.build.isoImage -I nixos-config=iso.nix $@
 
