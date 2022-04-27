@@ -52,10 +52,14 @@
 
     shells = [ pkgs.xonsh ];
 
+    sessionVariables = rec {
+      XONSH_HISTORY_FILE = "/tmp/.xonsh_history"; # workaround https://github.com/xonsh/xonsh/issues/4600
+    };
+
     systemPackages = with pkgs; [
 
       arch-install-scripts
-      busybox
+      busybox   # lazy workaround for directly using timeshift-unwrapped
       gnome.file-roller
       gnome.gnome-system-monitor
       gnome.gnome-terminal
