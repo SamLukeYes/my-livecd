@@ -42,11 +42,15 @@ in
         mode = "0444";
       };
     };
+
     systemPackages = with pkgs;
       [
+        arch-install-scripts
         gnupg
         # local.gnupg
         local.pacman
+        local.pacman-static
+        local.pacstrap-static
       ];
   };
 

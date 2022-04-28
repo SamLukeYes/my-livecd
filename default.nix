@@ -5,6 +5,8 @@ with (import <nixos> {});
 
   # pacman is based on https://github.com/NixOS/nixpkgs/pull/161115
   pacman = callPackage ./pacman {};
+  pacman-static = callPackage ./pacman/static.nix {};
+  pacstrap-static = callPackage ./pacman/pacstrap-static.nix {};
 
   # timeshift is based on https://github.com/NixOS/nixpkgs/pull/126481
   # timeshift = callPackage ./timeshift { grubPackage = grub2_full; };

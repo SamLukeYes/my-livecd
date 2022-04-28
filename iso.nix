@@ -15,7 +15,7 @@
     # doesn't need to run "nix-channel --update" first.
     <nixos/nixos/modules/installer/cd-dvd/channel.nix>
 
-    # Get pacman ready
+    # Get ready to install Arch Linux
     ./pacman/init.nix
   ];
 
@@ -58,7 +58,6 @@
 
     systemPackages = with pkgs; [
 
-      arch-install-scripts
       busybox   # lazy workaround for directly using timeshift-unwrapped
       gnome.file-roller
       gnome.gnome-system-monitor
