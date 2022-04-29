@@ -60,10 +60,10 @@
 
       baobab
       busybox   # lazy workaround for directly using timeshift-unwrapped
+      cinnamon.nemo
       gnome.file-roller
       gnome.gnome-system-monitor
       gnome.gnome-terminal
-      gnome.nautilus
       inxi
       local.timeshift
 
