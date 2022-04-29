@@ -58,6 +58,7 @@
 
     systemPackages = with pkgs; [
 
+      baobab
       busybox   # lazy workaround for directly using timeshift-unwrapped
       gnome.file-roller
       gnome.gnome-system-monitor
