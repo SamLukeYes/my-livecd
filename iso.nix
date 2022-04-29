@@ -19,7 +19,7 @@
     ./pacman/init.nix
   ];
 
-
+  nix.binaryCaches = [ "${import ./mirror.nix}/nix-channels/store" ];
 
   # boot.kernelPackages = pkgs.linuxPackages_latest;
 

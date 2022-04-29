@@ -22,7 +22,7 @@ in
         mode = "0644";
       };
       "pacman.d/mirrorlist" = {
-        source = ./mirrorlist;
+        text = "Server = ${import ../mirror.nix}/archlinux/$repo/os/$arch\n";
         mode = "0644";
       };
       "pacman.d/init.sh" = {
