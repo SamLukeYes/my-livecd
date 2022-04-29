@@ -45,6 +45,7 @@
       tracker-miners.enable = false;
       tracker.enable = false;
     };
+    gvfs.enable = true;
     # xserver.excludePackages = [ pkgs.xterm ];
   };
 
