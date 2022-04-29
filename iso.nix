@@ -49,15 +49,11 @@
     # xserver.excludePackages = [ pkgs.xterm ];
   };
 
-  users.defaultUserShell = pkgs.xonsh;
+  users.defaultUserShell = pkgs.fish;
 
   environment = {
 
-    shells = [ pkgs.xonsh ];
-
-    sessionVariables = rec {
-      XONSH_HISTORY_FILE = "/tmp/.xonsh_history"; # workaround https://github.com/xonsh/xonsh/issues/4600
-    };
+    shells = [ pkgs.fish ];
 
     systemPackages = with pkgs; [
 
