@@ -45,12 +45,12 @@ in
 
     systemPackages = with pkgs;
       [
-        arch-install-scripts
+        # arch-install-scripts
         gnupg
         # local.gnupg
+        local.arch-install-scripts
         local.pacman
         local.pacman-static
-        local.pacstrap-static
       ];
   };
 
