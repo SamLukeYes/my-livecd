@@ -1,7 +1,7 @@
 # Modify this file to use your own reverse proxy,
 # or use an empty string to disable it.
 
-# NOTE: fetchGitHub doesn't use a reverse proxy
+# Currently, this is only used to download the pacman source tarball.
 
 "https://rp.samlukeyes123.workers.dev/"
 
