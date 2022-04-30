@@ -62,6 +62,8 @@ stdenv.mkDerivation rec {
       --replace @pkgdatadir@/keyrings /etc/pacman.d/keyrings
   '';
 
+  hardeningDisable = ["all"];
+
   mesonFlags = [
     "--sysconfdir=/etc"
     "--localstatedir=/var"

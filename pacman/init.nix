@@ -50,7 +50,6 @@ in
         # local.gnupg
         local.arch-install-scripts
         local.pacman
-        local.pacman-static
       ];
   };
 
