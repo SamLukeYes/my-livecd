@@ -1,6 +1,6 @@
 { lib
 , stdenv
-, fetchFromGitHub
+, fetchzip
 , gettext
 , pkg-config
 , which
@@ -17,10 +17,8 @@ stdenv.mkDerivation rec {
   pname = "timeshift";
   version = "21.09.1";
 
-  src = fetchFromGitHub {
-    owner = "teejee2008";
-    repo = "timeshift";
-    rev = "v${version}";
+  src = fetchzip {
+    url = "${import ../reverse-proxy.nix}https://github.com/teejee2008/timeshift/archive/v${version}.tar.gz";
     sha256 = "sha256-x7KbKA7/ZzazhmnIx4r2Ml5wGj916DpVopGJpgdvpfw=";
   };
 

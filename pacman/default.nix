@@ -1,5 +1,6 @@
 { lib
 , stdenv
+, callPackage
 , fetchurl
 , asciidoc
 , bzip2
@@ -19,6 +20,9 @@
 , zlib
 }:
 
+let
+  archlinux-keyring = callPackage ./keyring.nix {};
+in
 stdenv.mkDerivation rec {
   pname = "pacman";
   version = "6.0.1";
@@ -39,6 +43,7 @@ stdenv.mkDerivation rec {
   ];
 
   buildInputs = [
+    archlinux-keyring
     bzip2
     curl
     gpgme
@@ -59,7 +64,8 @@ stdenv.mkDerivation rec {
     substituteInPlace scripts/repo-add.sh.in \
       --replace bsdtar "${libarchive}/bin/bsdtar"
     substituteInPlace scripts/pacman-key.sh.in \
-      --replace @pkgdatadir@/keyrings /etc/pacman.d/keyrings
+      --replace @pkgdatadir@/keyrings ${archlinux-keyring}/share/pacman/keyrings \
+      --replace "--batch --check-trustdb" "--batch --check-trustdb --allow-weak-key-signatures"
   '';
 
   hardeningDisable = ["all"];

@@ -6,11 +6,6 @@ Great thanks [@NickCao](https://github.com/NickCao) and other members of [NixOS 
 
 ## Build instructions
 
-- build dependencies
-
-    - nix
-    - bubblewrap
-
 1. Clone this repository.
 
 ```sh
