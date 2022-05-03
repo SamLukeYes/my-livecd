@@ -13,9 +13,7 @@ git clone https://github.com/SamLukeYes/my-livecd.git
 cd my-livecd/
 ```
 
-2. Have a look at `mirror.nix`, `reverse-proxy.nix` and `makeiso.sh`. Modify them according to their comments.
-
-*NOTE: It's recommended to build this iso on `nixos-21.11` channel, because `gnupg-2.3` breaks `archlinux-keyring` currently.*
+2. Have a look at `mirror.nix`, `reverse-proxy.nix` and `makeiso.sh`. Modify them according to their comments. You can also edit `iso.nix` for further customization.
 
 3. Run `makeiso.sh`.
 
