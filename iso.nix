@@ -59,10 +59,10 @@
 
       baobab
       cinnamon.nemo
+      clapper
       gnome.file-roller
       gnome.gnome-system-monitor
       gnome.gnome-terminal
-      gnome.totem
       inxi
       local.timeshift
 
